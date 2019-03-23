@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/animation.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/fontello-embedded.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/fontello.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <title>Video</title>
+  </head>
+  <body>
+    <div class="video-container">
+      <div class="video">
+        <video src="1.mp4"></video>
+        <div class="big-icon">
+          <div class="center-parent">
+            <div class="center-children">
+              <div class="icon-container-parent">
+                <div class="icon-container-children">
+                  <i class="icon-play"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video-controlls">
+          <div class="playpause">
+            <div class="play">
+              <i class="icon-play"></i>
+            </div>
+            <div class="pause">
+              <i class="icon-pause"></i>
+            </div>
+          </div>
+          <div class="time">
+            <span>
+              <span class="currentTime">00:00</span>/<span class="duration">00:00</span>
+            </span>
+          </div>
+          <div class="reproduction-container">
+            <div class="reproduction-body">
+              <div class="time-globe">
+                <span>00:00</span>
+              </div>
+              <div class="reproduction-played"></div>
+              <div class="circle-indicator"></div>
+            </div>
+          </div>
+          <div class="video-options">
+            <div class="volume element-parent">
+              <i class="icon-volume-up icon-clickeable"></i>
+              <div class="volume-container element-hidden">
+                <div class="volume-body">
+                  <div class="time-globe">
+                    <span>00:00</span>
+                  </div>
+                  <div class="volume-actual"></div>
+                  <div class="circle-indicator"></div>
+                </div>
+              </div>
+            </div>
+            <div class="settings element-parent">
+              <i class="icon-cog icon-clickeable"></i>
+              <div class="settings-container element-hidden">
+                <label class="setting-option">
+                  <input type="radio" name="velocity" value="0.5">0.5
+                </label>
+                <label class="setting-option active">
+                  <input type="radio" name="velocity" value="1" checked> Normal
+                </label>
+                <label class="setting-option">
+                  <input type="radio" name="velocity" value="1.5">1.5
+                </label>
+                <label class="setting-option">
+                  <input type="radio" name="velocity" value="2">2
+                </label>
+              </div>
+            </div>
+            <div class="full-screen">
+              <i class="icon-resize-full"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js" charset="utf-8"></script>
+  </body>
+</html>

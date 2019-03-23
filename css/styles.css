@@ -1,0 +1,291 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  cursor: pointer;
+}
+
+/* Modo pantalla completa */
+
+::-webkit-media-controls {
+  display:none !important;
+}
+::-webkit-media-controls-enclosure {
+  display:none !important;
+}
+
+video:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+.video-fullScreen {
+  width: 100%;
+  height: 100%;
+}
+
+/* ->Modo pantalla completa */
+
+.video-container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.video-container .video {
+  position: relative;
+  background: #000;
+  text-align: center;
+}
+
+.video-container .video video {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.video-fullScreen video {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.video-container .video .video-controlls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  display: none;
+}
+
+.video-fullScreen .video-controlls {
+  padding: 17px;
+}
+
+/* Asignar medidas a cada árte del reproductor */
+
+.video-container .video .video-controlls .playpause {
+  display: inline-block;
+  width: 7%;
+  float: left;
+  text-align: center;
+}
+
+.video-container .video .video-controlls .time {
+  display: inline-block;
+  width: 15%;
+  float: left;
+}
+
+.video-container .video .video-controlls .reproduction-container {
+  display: inline-block;
+  width: 65%;
+  float: left;
+}
+
+.video-container .video .video-controlls .video-options {
+  display: inline-block;
+  width: 13%;
+  float: left;
+}
+
+/* ->Asignar medidas a cada árte del reproductor */
+
+.video-container .video .video-controlls .playpause .pause {
+  display: none;
+}
+
+/*TiempoDeReproduccion*/
+
+.video-container .video .video-controlls .reproduction-container .reproduction-body {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  margin-bottom: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.video-container .video .video-controlls .reproduction-container .reproduction-body .time-globe {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  transform: translateX(-50%);
+  font-size: 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 4px;
+  display: none;
+}
+
+.video-container .video .video-controlls .reproduction-container .reproduction-body .reproduction-played {
+  height: 4px;
+  background: #000;
+  width: 0;
+}
+
+.video-container .video .video-controlls .reproduction-container .reproduction-body .circle-indicator {
+  position: absolute;
+  top: 0;
+  margin-top: -6px;
+  left: 0;
+  transform: translateX(-50%);
+  display: inline-block;
+  background: #bb0101;
+  border-radius: 100%;
+  border: 1px solid #000;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+/*->TiempoDeReproduccion*/
+
+/*Volume*/
+
+.video-container .video .video-controlls .video-options .volume {
+  position: relative;
+}
+
+.video-container .video .video-controlls .video-options .volume .volume-container {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  height: 100px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  display: none;
+}
+
+.video-container .video .video-controlls .video-options .volume .volume-container .volume-body {
+  display: inline-block;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  margin-bottom: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.video-container .video .video-controlls .video-options .volume .volume-container .volume-body .time-globe {
+  position: absolute;
+  bottom: 100%;
+  left: 15px;
+  transform: translateY(50%);
+  font-size: 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 4px;
+  display: none;
+}
+
+.video-container .video .video-controlls .video-options .volume .volume-container .volume-body .volume-actual {
+  position: absolute;
+  bottom: 0;
+  height:100%;
+  background: #000;
+  width: 4px;
+}
+
+.video-container .video .video-controlls .video-options .volume .volume-container .volume-body .circle-indicator {
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(50%);
+  display: inline-block;
+  background: #bb0101;
+  border-radius: 100%;
+  border: 1px solid #000;
+  height: 15px;
+  width: 15px;
+  margin-left: -7px;
+  cursor: pointer;
+}
+
+/* ->Volume*/
+
+/*Configuracion*/
+.video-container .video .video-controlls .video-options .volume, .video-container .video .video-controlls .video-options .settings, .video-container .video .video-controlls .video-options .full-screen {
+  display: inline-block;
+  width: 33.33333333333333%;
+  float: left;
+  position: relative;
+}
+
+.video-container .video .video-controlls .video-options .settings .settings-container {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100px;
+  display: none;
+}
+
+.video-container .video .video-controlls .video-options .settings .settings-container .setting-option {
+  display: inline-block;
+  width: 100%;
+  float: left;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.video-container .video .video-controlls .video-options .settings .settings-container .setting-option:hover, .video-container .video .video-controlls .video-options .settings .settings-container .setting-option:active, .video-container .video .video-controlls .video-options .settings .settings-container .setting-option.active {
+  background: rgba(213, 0, 0, 0.5);
+}
+
+.video-container .video .video-controlls .video-options .settings .settings-container .setting-option input {
+  float: left;
+}
+/*->Configuracion*/
+
+/* Big Icon */
+
+.video-container .video .big-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.video-container .video .big-icon .center-parent {
+  display: table;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.video-container .video .big-icon .center-parent .center-children {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.video-container .video .big-icon .center-parent .center-children .icon-container-parent {
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+  display: table;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.video-container .video .big-icon .center-parent .center-children .icon-container-parent .icon-container-children {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+/* ->Big Icon */
